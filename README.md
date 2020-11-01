@@ -8,8 +8,9 @@ This project is a starting point for a Flutter application.
 
 ## Photos
 
-![Photo One](destini1.png =250x)
+<img src="destini1.png" width="200">
+#![Photo One](destini1.png =250x)
 <br />
-![Photo Two](destini2.png =250x))
+#![Photo Two](destini2.png =250x))
 <br />
-![Photo Three](destini3.png =250x)
+#![Photo Three](destini3.png =250x)

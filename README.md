@@ -8,8 +8,8 @@ This project is a starting point for a Flutter application.
 
 ## Photos
 
-![Photo One](destini1.png)
-<br />
-![Photo Two](destini2.png)
-<br />
-![Photo Three](destini3.png)
+<p float="left">
+  <img src="destini1.png" width="200">
+  <img src="destini2.png" width="200">
+  <img src="destini3.png" width="200">
+</p>

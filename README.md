@@ -8,8 +8,8 @@ This project is a starting point for a Flutter application.
 
 ## Photos
 
-![Photo One](destini1.png)
+![Photo One](destini1.png =250x)
 <br />
-![Photo Two](destini2.png)
+![Photo Two](destini2.png =250x))
 <br />
-![Photo Three](destini3.png)
+![Photo Three](destini3.png =250x))

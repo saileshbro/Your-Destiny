@@ -2,9 +2,9 @@
 
 An app that presents a story and allows the user to pick between two choices. The choices you select determine the outcome of the story.
 
-## Getting Started
+## Project managed by Group 10
 
-This project is a starting point for a Flutter application.
+This project is managed by BoredCoders. 
 
 ## Photos
 

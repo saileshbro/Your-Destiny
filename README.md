@@ -8,8 +8,8 @@ This project is a starting point for a Flutter application.
 
 ## Photos
 
-<img src="destini1.png" width="200">
-<br />
-<img src="destini2.png" width="200">
-<br />
-<img src="destini3.png" width="200">
+<p float="left">
+  <img src="destini1.png" width="200">
+  <img src="destini2.png" width="200">
+  <img src="destini3.png" width="200">
+</p>

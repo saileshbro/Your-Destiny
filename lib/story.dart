@@ -1,6 +1,6 @@
 class Stories {
   List<Story> stories;
-  
+
   Stories({this.stories});
 }
 
@@ -21,8 +21,9 @@ class Page {
   String text;
   int page;
   Choices choices;
+  String background;
 
-  Page({this.text, this.page, this.choices});
+  Page({this.text, this.page, this.choices, this.background});
 }
 
 class Choices {

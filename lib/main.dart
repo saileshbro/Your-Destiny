@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_buddies_destini/menu_page.dart';
 import 'story_brain.dart';
 
 void main() => runApp(Destini());
@@ -8,7 +9,7 @@ class Destini extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: StoryPage(),
+      home: MenuPage(),
     );
   }
 }

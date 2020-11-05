@@ -1,7 +1,14 @@
 class Story {
-  String title;
-  String choice1;
-  String choice2;
+  String text;
+  Choices choices;
 
-  Story({this.title, this.choice1, this.choice2});
+  Story({this.text, this.choices});
+}
+
+class Choices {
+  String first;
+  String second;
+  String third;
+
+  Choices({this.first, this.second = '', this.third = ''});
 }

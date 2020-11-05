@@ -1,7 +1,7 @@
 import 'stories.dart';
 
 class StoryBrain {
-  final _storyData = getStory("stranger");
+  final _storyData = getStory("The Stranger");
 
   String getPage() {
     return _storyData.story.pages[_pageNumber].text;

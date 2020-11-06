@@ -1,5 +1,7 @@
 import 'stories.dart';
 
+StoryBrain storyBrain = StoryBrain();
+
 class StoryBrain {
   final _storyData = getStory("The Stranger");
 

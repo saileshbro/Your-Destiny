@@ -13,7 +13,3 @@ This project is managed by BoredCoders.
   <img src="destini2.png" width="200">
   <img src="destini3.png" width="200">
 </p>
-
-## This is an example
-
-Here's some stuff we're going to commit and merge!

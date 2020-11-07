@@ -16,6 +16,13 @@ class _StoryPageState extends State<StoryPage> {
   final int index;
   _StoryPageState(this.index);
 
+  void refreshStoryPage(int newPageIndex) {
+    setState(() {
+      print(newPageIndex);
+      storyBrain.nextPage(newPageIndex);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,7 +52,7 @@ class _StoryPageState extends State<StoryPage> {
                   ),
                 ),
               ),
-              ChoiceList(storyBrain.getPage()),
+              ...choiceButtonList(storyBrain.getPage(), refreshStoryPage),
             ],
           ),
         ),
@@ -54,47 +61,36 @@ class _StoryPageState extends State<StoryPage> {
   }
 }
 
-class ChoiceList extends StatefulWidget {
-  final SPage storyPage;
-  ChoiceList(this.storyPage);
-
-  @override
-  _ChoiceListState createState() => _ChoiceListState(this.storyPage);
-}
-
-class _ChoiceListState extends State<ChoiceList> {
-  final SPage storyPage;
-  _ChoiceListState(this.storyPage);
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.separated(
-      padding: const EdgeInsets.symmetric(horizontal: 10),
-      itemCount: 2,
-      separatorBuilder: (context, index) {
-        return SizedBox(
-          height: 20.0,
-        );
-      },
-      itemBuilder: (context, index) {
-        return Expanded(
-          flex: 2,
-          child: FlatButton(
-            onPressed: () {
-              setState(() {
-                storyBrain.nextPage(index);
-              });
-            },
-            color: Colors.red,
-            child: Text(
-              "This is a choice...",
-              style: TextStyle(
-                fontSize: 20.0,
-              ),
-            ),
-          ),
-        );
-      },
+List<Widget> choiceButtonList(SPage storyPage, Function refreshStoryPage) {
+  int numButtons = storyPage.choices.length;
+  List<Widget> toReturn = List<Widget>();
+  for (int i = 0; i < numButtons; i++) {
+    toReturn.add(
+      choiceButton(
+        text: storyPage.choices[i].text,
+        index: i,
+        refreshStoryPage: refreshStoryPage,
+      ),
     );
   }
+  return toReturn;
+}
+
+Widget choiceButton({String text, int index, Function refreshStoryPage}) {
+  return Padding(
+    padding: EdgeInsets.symmetric(horizontal: 10.0),
+    child: FlatButton(
+      onPressed: () {
+        print(index);
+        refreshStoryPage(index);
+      },
+      color: Colors.red,
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: 20.0,
+        ),
+      ),
+    ),
+  );
 }

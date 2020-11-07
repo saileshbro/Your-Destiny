@@ -25,11 +25,11 @@ class SPage {
 }
 
 class Choice {
-  String choice;
-  int pageIndex;
+  String text;
+  int pagePointer;
 
   Choice({
-    @required String choice,
-    @required int pageIndex,
+    @required this.text,
+    @required this.pagePointer,
   });
 }

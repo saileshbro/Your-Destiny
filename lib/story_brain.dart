@@ -13,6 +13,7 @@ class StoryBrain {
 
   void setStoryBrain(int storyIndex) {
     _storyData = getStory(storyIndex);
+    _pageNumber = 0;
   }
 
   String getTitle() {
@@ -29,6 +30,6 @@ class StoryBrain {
 
   void nextPage(int choiceIndex) {
     Choice c = getChoice(choiceIndex);
-    _pageNumber = c.pageIndex ?? 0;
+    _pageNumber = c.pagePointer ?? 0;
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'main.dart';
+import 'story_page.dart';
 import 'stories.dart';
 
 class MenuPage extends StatelessWidget {
@@ -80,7 +80,8 @@ class OptionsButton extends StatelessWidget {
 
 class StoryTile extends StatelessWidget {
   final int index;
-  final String title;
+  final String title; // <<< We may not even need this variable.
+  // ^^^ All of the stories are indexed
 
   StoryTile({@required this.index}) : this.title = stories[index].title;
 
@@ -95,8 +96,8 @@ class StoryTile extends StatelessWidget {
         ),
         onTap: () {
           // All tiles push to the default story as of now
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => StoryPage()));
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => StoryPage(index)));
         },
       ),
     );

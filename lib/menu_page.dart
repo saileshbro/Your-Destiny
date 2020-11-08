@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_buddies_destini/stories.dart';
 import 'main.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class MenuPage extends StatelessWidget {
   @override
@@ -14,7 +16,7 @@ class MenuPage extends StatelessWidget {
             height: 10,
           ),
           Text(
-            'Choose Your Story',
+            'menu_text'.tr(),
             style: TextStyle(fontSize: 30),
           ),
           SizedBox(
@@ -40,7 +42,7 @@ class StoryList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
         padding: const EdgeInsets.symmetric(horizontal: 10),
-        itemCount: 10,
+        itemCount: stories.length,
         separatorBuilder: (context, index) => StoryTileSeparator(),
         itemBuilder: (context, index) => StoryTile(index: index));
   }
@@ -82,7 +84,7 @@ class StoryTile extends StatelessWidget {
   final String title;
 
   StoryTile({@required this.index})
-      : this.title = 'Story no. ' + (index + 1).toString();
+      : this.title = stories[index].title;
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +92,7 @@ class StoryTile extends StatelessWidget {
       color: Theme.of(context).primaryColor,
       child: ListTile(
         title: Text(
-          title,
+          title.tr(),
           textAlign: TextAlign.center,
         ),
         onTap: () {

@@ -4,7 +4,7 @@ import 'package:flutter_buddies_destini/menu_page.dart';
 import 'story_brain.dart';
 
 void main() => runApp(EasyLocalization(
-  supportedLocales: [Locale('en'), Locale('pl')],
+    supportedLocales: [Locale('en'), Locale('pl')],
     path: 'assets/translations',
     fallbackLocale: Locale('en'),
     child: Destini()));
@@ -46,7 +46,7 @@ class _StoryPageState extends State<StoryPage> {
                 flex: 12,
                 child: Center(
                   child: Text(
-                    storyBrain.getPage(),
+                    storyBrain.getPage().tr(),
                     style: TextStyle(
                       fontSize: 25.0,
                     ),
@@ -64,7 +64,7 @@ class _StoryPageState extends State<StoryPage> {
                   },
                   color: Colors.red,
                   child: Text(
-                    storyBrain.getChoice1(),
+                    storyBrain.getChoice1().tr(),
                     style: TextStyle(
                       fontSize: 20.0,
                     ),
@@ -86,12 +86,13 @@ class _StoryPageState extends State<StoryPage> {
                       });
                     },
                     color: Colors.blue,
-                    child: Text(
-                      storyBrain.getChoice2(),
+                    // Without the condition, localization module throws an error (not app-breaking)
+                    child: storyBrain.buttonShouldBeVisible() ? Text(
+                      storyBrain.getChoice2().tr(),
                       style: TextStyle(
                         fontSize: 20.0,
                       ),
-                    ),
+                    ) : SizedBox.shrink(),
                   ),
                 ),
               ),

@@ -1,3 +1,20 @@
 {
-  "menu_text" : "Wybierz Swoją Opowieść"
+  "menu_text" : "Wybierz Swoją Opowieść",
+
+  "s0_title" : "Nieznajomy",
+  "s0_p0_text" : "Twój samochód złapał gumę na krętej drodze pośrodku niczego. Nie ma zasięgu. Decydujesz się złapać stopa. Obok ciebie zatrzymuje się pordzewiała furgonetka. Mężczyzna w kapeluszu z szerokim rondem i z oczami pozbawionymi duszy otwiera ci drzwi, pytając: \"Potrzebujesz podwózki?\"",
+  "s0_p0_c0" : "\"Jasne, dzięki za pomoc!\"",
+  "s0_p0_c1" : "Lepiej zapytać go najpierw, czy nie jest mordercą...",
+  "s0_p1_text" : "Potakuje, nieprzejęty pytaniem.",
+  "s0_p1_c0" : "Przynajmniej jest szczery. Wchodzisz do środka.",
+  "s0_p1_c1" : "\"Czekaj, wiem jak zmienić oponę!\"",
+  "s0_p2_text" : "Gdy zaczynacie jechać, nieznajomy zaczyna opowiadać o swojej relacji z matką. Z minuty na minutę robi się coraz bardziej zdenerwowany. Prosi cię o otwarcie schowka na rękawiczki. W środku znajdujesz zakrwawiony nóz, dwa odcięte palce i kasetę z muzyką Eltona Johna. Mężczyzna sięga do schowka.",
+  "s0_p2_c0" : "\"Kocham Eltona Johna!\" \n*Wręcz mu kasetę*",
+  "s0_p2_c1" : "Albo on, albo ja! \n*Wyjmujesz nóż i dźgasz go.*",
+  "s0_p3_text" : "Co? Ależ wymówka! Nie wiesz, że wypadki drogowe są drugą najczęstszą przyczyną przypadkowej śmierci wśród osób dorosłych?",
+  "s0_p3_c0" : "Restart",
+  "s0_p4_text" : "Gdy samochód wypada poza barierki i zaczyna przechylać się ku skałom na dole, zaczynasz kwestionować decyzję o dźgnięciu kierowcy w czasie jazdy.",
+  "s0_p4_c0" : "Restart",
+  "s0_p5_text" : "Zaprzyjaźniasz się z mordercą śpiewając razem z nim \"Can you feel the love tonight\". Odwozi cię do najbliższego miasta. Zanim wysiądziesz, pyta cię o dobre miejsce do pozbywania się ciał. Odpowiadasz: \"Spróbuj na nabrzeżu\".",
+  "s0_p5_c0" : "Restart"
 }

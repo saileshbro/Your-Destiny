@@ -27,7 +27,7 @@ class _StoryPageState extends State<StoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(storyBrain.getTitle())),
+      appBar: AppBar(title: Text(storyBrain.getTitle().tr())),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(

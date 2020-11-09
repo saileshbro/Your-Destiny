@@ -92,7 +92,7 @@ class StoryTile extends StatelessWidget {
       color: Theme.of(context).primaryColor,
       child: ListTile(
       title: Text(
-      title,
+      title.tr(),
       textAlign: TextAlign.center,
     ),
     onTap: () {

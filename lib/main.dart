@@ -11,6 +11,9 @@ void main() => runApp(EasyLocalization(
 class Destini extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       home: MenuPage(),

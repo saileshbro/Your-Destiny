@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_buddies_destini/stories.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'story_page.dart';
-import 'stories.dart';
 
 class MenuPage extends StatelessWidget {
   @override
@@ -15,7 +16,7 @@ class MenuPage extends StatelessWidget {
             height: 20,
           ),
           Text(
-            'Choose Your Story',
+            'menu_text'.tr(),
             style: TextStyle(fontSize: 30),
           ),
           SizedBox(
@@ -41,8 +42,8 @@ class StoryList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
         padding: const EdgeInsets.symmetric(horizontal: 10),
-        itemCount: stories.length,
         scrollDirection: Axis.vertical,
+        itemCount: stories.length,
         separatorBuilder: (context, index) => StoryTileSeparator(),
         itemBuilder: (context, index) => StoryTile(index: index));
   }
@@ -91,16 +92,15 @@ class StoryTile extends StatelessWidget {
     return Card(
       color: Theme.of(context).primaryColor,
       child: ListTile(
-        title: Text(
-          title,
-          textAlign: TextAlign.center,
-        ),
-        onTap: () {
-          // All tiles push to the default story as of now
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => StoryPage(index)));
-        },
-      ),
+          title: Text(
+            title.tr(),
+            textAlign: TextAlign.center,
+          ),
+          onTap: () {
+            // All tiles push to the default story as of now
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => StoryPage(index)));
+          }),
     );
   }
 }

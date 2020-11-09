@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'story_brain.dart';
 import 'story.dart';
-import 'package:easy_localization/easy_localization.dart';
 
 class StoryPage extends StatefulWidget {
   final int index;
@@ -27,7 +26,7 @@ class _StoryPageState extends State<StoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(storyBrain.getTitle().tr())),
+      appBar: AppBar(title: Text(storyBrain.getTitle())),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -46,7 +45,7 @@ class _StoryPageState extends State<StoryPage> {
                 flex: 12,
                 child: Center(
                   child: Text(
-                    storyBrain.getPage().text.tr(),
+                    storyBrain.getPage().text,
                     style: TextStyle(
                       fontSize: 25.0,
                     ),
@@ -68,7 +67,7 @@ List<Widget> choiceButtonList(SPage storyPage, Function refreshStoryPage) {
   for (int i = 0; i < numButtons; i++) {
     toReturn.add(
       choiceButton(
-        text: storyPage.choices[i].text.tr(),
+        text: storyPage.choices[i].text,
         index: i,
         refreshStoryPage: refreshStoryPage,
       ),

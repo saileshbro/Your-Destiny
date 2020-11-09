@@ -20,4 +20,3 @@ class Destini extends StatelessWidget {
     );
   }
 }
-

@@ -8,7 +8,7 @@ get stories => [
           SPage(
             pageIndex: 0,
             text: 's0_p0_text',
-                choices: [
+            choices: [
               Choice(
                 text: 's0_p0_c0',
                 pagePointer: 2,
@@ -36,33 +36,29 @@ get stories => [
           SPage(
             pageIndex: 2,
             text: 's0_p2_text',
-                choices: [
-              Choice(
-                  text: 's0_p2_c0',
-                  pagePointer: 5),
-              Choice(
-                  text: 's0_p2_c1',
-                  pagePointer: 4)
+            choices: [
+              Choice(text: 's0_p2_c0', pagePointer: 5),
+              Choice(text: 's0_p2_c1', pagePointer: 4)
             ],
           ),
           SPage(
             pageIndex: 3,
             text: 's0_p3_text',
-                choices: [
+            choices: [
               Choice(text: 's0_p3_c0', pagePointer: null),
             ],
           ),
           SPage(
             pageIndex: 4,
             text: 's0_p4_text',
-                choices: [
+            choices: [
               Choice(text: 's0_p4_c0', pagePointer: null),
             ],
           ),
           SPage(
             pageIndex: 5,
             text: 's0_p5_text',
-                choices: [
+            choices: [
               Choice(text: 's0_p5_c0', pagePointer: null),
             ],
           ),
@@ -79,7 +75,7 @@ get stories => [
           SPage(
             pageIndex: 0,
             text: "s1_p0_text",
-                choices: [
+            choices: [
               Choice(
                 text: 's1_p0_c0',
                 pagePointer: 2,
@@ -92,8 +88,7 @@ get stories => [
           ),
           SPage(
             pageIndex: 1,
-            text:
-                's1_p1_text',
+            text: 's1_p1_text',
             choices: [
               Choice(
                 text: 's1_p1_c0',
@@ -103,20 +98,17 @@ get stories => [
           ),
           SPage(
             pageIndex: 2,
-            text:
-                "s1_p2_text",
+            text: "s1_p2_text",
             choices: [
               Choice(
-                text:
-                    's1_p2_c0',
+                text: 's1_p2_c0',
                 pagePointer: 3,
               )
             ],
           ),
           SPage(
             pageIndex: 3,
-            text:
-                's1_p3_text',
+            text: 's1_p3_text',
             choices: [
               Choice(
                 text: 's1_p3_c0',
@@ -130,8 +122,7 @@ get stories => [
           ),
           SPage(
             pageIndex: 4,
-            text:
-                's1_p4_text',
+            text: 's1_p4_text',
             choices: [
               Choice(
                 text: 's1_p4_c0',
@@ -141,8 +132,7 @@ get stories => [
           ),
           SPage(
             pageIndex: 5,
-            text:
-                's1_p5_text',
+            text: 's1_p5_text',
             choices: [
               Choice(text: "s1_p5_c0", pagePointer: null),
             ],
@@ -154,4 +144,3 @@ get stories => [
 getStory(int index) {
   return stories[index];
 }
-

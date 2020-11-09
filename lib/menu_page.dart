@@ -56,11 +56,11 @@ class StoryTileSeparator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 5.0),
-          child: Divider(
-            color: Theme.of(context).secondaryHeaderColor,
-          ),
-        );
+      padding: const EdgeInsets.symmetric(vertical: 5.0),
+      child: Divider(
+        color: Theme.of(context).secondaryHeaderColor,
+      ),
+    );
   }
 }
 
@@ -91,14 +91,15 @@ class StoryTile extends StatelessWidget {
     return Card(
       color: Theme.of(context).primaryColor,
       child: ListTile(
-      title: Text(
-      title.tr(),
-      textAlign: TextAlign.center,
-    ),
-    onTap: () {
-      // All tiles push to the default story as of now
-      Navigator.push(context,
-          MaterialPageRoute(builder: (context) => StoryPage(index)));
-    }),);}
+          title: Text(
+            title.tr(),
+            textAlign: TextAlign.center,
+          ),
+          onTap: () {
+            // All tiles push to the default story as of now
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => StoryPage(index)));
+          }),
+    );
   }
-
+}

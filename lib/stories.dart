@@ -96,7 +96,7 @@ get stories => [
                 's1_p1_text',
             choices: [
               Choice(
-                text: 's1_p0_c0',
+                text: 's1_p1_c0',
                 pagePointer: 0,
               ),
             ],

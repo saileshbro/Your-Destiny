@@ -42,6 +42,7 @@ class StoryList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
         padding: const EdgeInsets.symmetric(horizontal: 10),
+        scrollDirection: Axis.vertical,
         itemCount: stories.length,
         separatorBuilder: (context, index) => StoryTileSeparator(),
         itemBuilder: (context, index) => StoryTile(index: index));

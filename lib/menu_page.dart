@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_buddies_destini/stories.dart';
-import 'main.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'story_page.dart';
 
 class MenuPage extends StatelessWidget {
   @override
@@ -81,26 +81,24 @@ class OptionsButton extends StatelessWidget {
 
 class StoryTile extends StatelessWidget {
   final int index;
-  final String title;
+  final String title; // <<< We may not even need this variable.
+  // ^^^ All of the stories are indexed
 
-  StoryTile({@required this.index})
-      : this.title = stories[index].title;
+  StoryTile({@required this.index}) : this.title = stories[index].title;
 
   @override
   Widget build(BuildContext context) {
     return Card(
       color: Theme.of(context).primaryColor,
       child: ListTile(
-        title: Text(
-          title.tr(),
-          textAlign: TextAlign.center,
-        ),
-        onTap: () {
-          // All tiles push to the default story as of now
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => StoryPage()));
-        },
-      ),
-    );
+      title: Text(
+      title,
+      textAlign: TextAlign.center,
+    ),
+    onTap: () {
+      // All tiles push to the default story as of now
+      Navigator.push(context,
+          MaterialPageRoute(builder: (context) => StoryPage(index)));
+    }),);}
   }
-}
+

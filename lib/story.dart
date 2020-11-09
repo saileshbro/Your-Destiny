@@ -1,35 +1,35 @@
-class Stories {
-  List<Story> stories;
-
-  Stories({this.stories});
-}
+import 'package:flutter/cupertino.dart';
 
 class Story {
   String title;
-  Pages story;
+  List<SPage> pages;
 
-  Story({this.title, this.story});
+  Story({
+    @required this.title,
+    @required this.pages,
+  });
 }
 
-class Pages {
-  List<Page> pages;
-
-  Pages({this.pages});
-}
-
-class Page {
+class SPage {
   String text;
-  int page;
-  Choices choices;
+  int pageIndex;
+  List<Choice> choices;
   String background;
 
-  Page({this.text, this.page, this.choices, this.background});
+  SPage({
+    @required this.text,
+    @required this.pageIndex,
+    @required this.choices,
+    this.background,
+  });
 }
 
-class Choices {
-  String first;
-  String second;
-  String third;
+class Choice {
+  String text;
+  int pagePointer;
 
-  Choices({this.first, this.second = '', this.third = ''});
+  Choice({
+    @required this.text,
+    @required this.pagePointer,
+  });
 }

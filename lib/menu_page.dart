@@ -13,14 +13,14 @@ class MenuPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
-            height: 10,
+            height: 20,
           ),
           Text(
             'menu_text'.tr(),
             style: TextStyle(fontSize: 30),
           ),
           SizedBox(
-            height: 20,
+            height: 30,
           ),
           Flexible(
             child: StoryList(),

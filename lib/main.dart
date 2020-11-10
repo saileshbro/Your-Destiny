@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_buddies_destini/menu_page.dart';
 
 void main() => runApp(EasyLocalization(
-    supportedLocales: [Locale('en'), Locale('pl')],
+    supportedLocales: [Locale('en'), Locale('pl'), Locale('es')],
     path: 'assets/translations',
     fallbackLocale: Locale('en'),
     child: Destini()));

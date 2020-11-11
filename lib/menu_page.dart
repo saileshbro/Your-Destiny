@@ -12,6 +12,10 @@ class MenuPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          Align(
+            alignment: Alignment.centerRight,
+            child: LanguageChangeButton(),
+          ),
           SizedBox(
             height: 20,
           ),
@@ -36,6 +40,22 @@ class MenuPage extends StatelessWidget {
     ));
   }
 }
+
+// Added a button to change languages - Tragikomedes
+class LanguageChangeButton extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButton(
+      value: context.locale,
+        onChanged: (newLocale) {
+        context.locale = newLocale;
+        },
+    items: context.supportedLocales.map((locale) => DropdownMenuItem(value: locale, child: Text(locale.languageCode.toUpperCase()))).toList(),);
+  }
+}
+
+
 
 class StoryList extends StatelessWidget {
   @override

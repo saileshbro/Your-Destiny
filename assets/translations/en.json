@@ -2,6 +2,7 @@
   "menu_text": "Choose Your Story",
 
   "s0_title": "The Stranger",
+  "s0_credits": "Angela Yu, https://www.appbrewery.co/",
   "s0_p0_text": "Your car has blown a tire on a winding road in the middle of nowhere with no cell phone reception. You decide to hitchhike. A rusty pickup truck rumbles to a stop next to you. A man with a wide brimmed hat with soulless eyes opens the passenger door for you and asks: \"Need a ride, boy?\".",
   "s0_p0_c0": "\"I'll hop in. Thanks for the help!\"",
   "s0_p0_c1": "Better ask him if he's a murderer first...",
@@ -19,6 +20,7 @@
   "s0_p5_c0": "Restart",
 
   "s1_title": "The Red Letter",
+  "s1_credits": "Ben Wreford, Grade 9, Kent Street Senior High School",
   "s1_p0_text": "After a long hard day at your boring office job you arrive at home. Before you walk into your house you see a letter in your mailbox, an unusual occurrence as bill day is Thursday not Monday. You go up to the mailbox and see that there is a little red letter—quite suspicious.",
   "s1_p0_c0": "Open mail",
   "s1_p0_c1": "Go inside",

@@ -4,6 +4,7 @@ get stories => [
       // The Stranger
       Story(
         title: "s0_title",
+        credits: "s0_credits",
         pages: [
           SPage(
             pageIndex: 0,
@@ -71,6 +72,7 @@ get stories => [
       // Credits go to Ben Wreford, Grade 9, Kent Street Senior High School
       Story(
         title: "s1_title",
+        credits: "s1_credits",
         pages: [
           SPage(
             pageIndex: 0,

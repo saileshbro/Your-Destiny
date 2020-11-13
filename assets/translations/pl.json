@@ -2,6 +2,7 @@
   "menu_text": "Wybierz Swoją Opowieść",
 
   "s0_title": "Nieznajomy",
+  "s0_credits": "Angela Yu, https://www.appbrewery.co/",
   "s0_p0_text": "Twój samochód złapał gumę na krętej drodze pośrodku niczego. Nie ma zasięgu. Decydujesz się złapać stopa. Obok ciebie zatrzymuje się pordzewiała furgonetka. Mężczyzna w kapeluszu z szerokim rondem i z oczami pozbawionymi duszy otwiera ci drzwi, pytając: \"Potrzebujesz podwózki?\"",
   "s0_p0_c0": "\"Jasne, dzięki za pomoc!\"",
   "s0_p0_c1": "Lepiej zapytać go najpierw, czy nie jest mordercą...",
@@ -19,6 +20,7 @@
   "s0_p5_c0": "Restart",
 
   "s1_title": "Czerwony List",
+  "s1_credits": "Ben Wreford, Grade 9, Kent Street Senior High School",
   "s1_p0_text": "Po długim dniu nudnej pracy w biurze wracasz do domu. Wygląda na to, że w skrzynce pocztowej coś jest - to dość niespotykane, bo rachunki przychodza zwykle w czwartek, a nie w poniedziałek. Podchodzisz do skrzynki i dostrzegasz czerwony list - podejrzane.",
   "s1_p0_c0": "Otwórz list",
   "s1_p0_c1": "Wejdź do środka",

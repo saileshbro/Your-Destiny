@@ -2,10 +2,12 @@ import 'package:flutter/cupertino.dart';
 
 class Story {
   String title;
+  String credits;
   List<SPage> pages;
 
   Story({
     @required this.title,
+    @required this.credits,
     @required this.pages,
   });
 }

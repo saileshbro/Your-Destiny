@@ -2,6 +2,7 @@
   "menu_text": "Elige tu Historia",
 
   "s0_title": "El Desconocido",
+  "s0_credits": "Angela Yu, https://www.appbrewery.co/",
   "s0_p0_text": "La llanta de su carro se pincó en una carretera sinuoso en el medio de la nada sin recepción celular. Eliges hacer dedo. Una camioneta vieja para a tu lado. Un hombre con un sombrero de la ala ancha con ojos sin alma abierta la puerta del pasajero y te pregunta: \",¿Quieres que te lleve, chico?\"",
   "s0_p0_c0": "Seguro. ¡Gracias por su ayuda!",
   "s0_p0_c1": "Debería preguntarle si es asesino primero...",
@@ -19,6 +20,7 @@
   "s0_p5_c0": "Reiniciar",
 
   "s1_title": "La Carta Roja",
+  "s1_credits": "Ben Wreford, Grade 9, Kent Street Senior High School",
   "s1_p0_text": "Despues de un día arduosa en el trabajo aburrido de la oficina, llegas aa la casa. Antes de entrar a tu casa, ves una carta in tu buzón... Un evento raro debido a que la factura no llega hasta el Jueves. Vas al buzón y ves que hay una cartita roja. Sospechoso...",
   "s1_p0_c0": "Abrir la carta",
   "s1_p0_c1": "Entrar la casa",

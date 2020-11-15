@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'story_brain.dart';
-import 'story.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_buddies_destini/story_brain.dart';
+import 'package:flutter_buddies_destini/story.dart';
 
 class StoryPage extends StatefulWidget {
   final int index;
@@ -54,6 +53,8 @@ class _StoryPageState extends State<StoryPage> {
                 ),
               ),
               ...choiceButtonList(storyBrain.getPage(), refreshStoryPage),
+              // the '...' expands the list of Widgets returned by the choiceButtonList
+              // and inserts each Widget into the Column children
             ],
           ),
         ),

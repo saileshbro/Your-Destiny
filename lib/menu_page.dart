@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_buddies_destini/settings_page.dart';
 import 'package:flutter_buddies_destini/stories.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'story_page.dart';
@@ -89,8 +90,9 @@ class OptionsButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // TODO Make the options work
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsPage()));
+      },
       child: Icon(
         Icons.settings,
         color: Theme.of(context).secondaryHeaderColor,

@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_buddies_destini/font_manager.dart';
 import 'package:flutter_buddies_destini/menu_page.dart';
 import 'package:splashscreen/splashscreen.dart';
 
@@ -21,7 +22,7 @@ class _loadingPageState extends State<loadingPage> {
       home: SplashScreen(
         backgroundColor: Colors.black,
         seconds: 5,
-        navigateAfterSeconds: Destini(),
+        navigateAfterSeconds: FontManager(child: Destini()),
         title: Text(
           "Welcome to Your Destiny",
           style: TextStyle(

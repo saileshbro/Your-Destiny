@@ -1,6 +1,7 @@
 /* This is a helper class that enables dynamic font changes throughout the
 * entire app. Stateful widget enables us to do the actual changes which are
-* then transferred to all the widgets that can access the inherited widget.
+* then transferred to all the widgets that can access the inherited widget
+* (which is immutable by default).
 *                                                           - by Tragikomedes*/
 
 import 'package:flutter/cupertino.dart';
@@ -18,7 +19,7 @@ class FontManager extends StatefulWidget {
 }
 
 class _FontManagerState extends State<FontManager> {
-  int fontSize = 14;
+  int fontSize = 18;
   String font = "Roboto";
 
   @override

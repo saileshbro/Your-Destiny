@@ -9,7 +9,7 @@ class Preferences {
 
   static Future<Map<String, dynamic>> loadFont() async {
     var prefs = await SharedPreferences.getInstance();
-    int fontSize = prefs.getInt('fontSize') ?? 14;
+    int fontSize = prefs.getInt('fontSize') ?? 18;
     String font = prefs.getString('font') ?? 'Roboto';
     return {'fontSize': fontSize, 'font': font};
   }

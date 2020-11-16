@@ -1,9 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'story_brain.dart';
-import 'story.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'font_manager.dart';
+import 'package:flutter_buddies_destini/story_brain.dart';
+import 'package:flutter_buddies_destini/story.dart';
 
 class StoryPage extends StatefulWidget {
   final int index;

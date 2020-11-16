@@ -8,21 +8,20 @@ void main() => runApp(EasyLocalization(
     supportedLocales: [Locale('en'), Locale('pl'), Locale('es')],
     path: 'assets/translations',
     fallbackLocale: Locale('en'),
-    child: loadingPage()));
+    child: Destini()));
 
-class loadingPage extends StatefulWidget {
+class LoadingPage extends StatefulWidget {
   @override
-  _loadingPageState createState() => _loadingPageState();
+  _LoadingPageState createState() => _LoadingPageState();
 }
 
-class _loadingPageState extends State<loadingPage> {
+class _LoadingPageState extends State<LoadingPage> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: SplashScreen(
+    return SplashScreen(
         backgroundColor: Colors.black,
         seconds: 5,
-        navigateAfterSeconds: FontManager(child: Destini()),
+        navigateAfterSeconds: MenuPage(),
         title: Text(
           "Welcome to Your Destiny",
           style: TextStyle(
@@ -31,23 +30,25 @@ class _loadingPageState extends State<loadingPage> {
             fontWeight: FontWeight.bold,
           ),
         ),
-        routeName: "/",
         styleTextUnderTheLoader: TextStyle(),
         loaderColor: Colors.white,
-      ),
-    );
+      );
   }
 }
 
 class Destini extends StatelessWidget {
   Widget build(BuildContext context) {
-    return MaterialApp(
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      home: MenuPage(),
+    // Inherited widgets must be on top of the MaterialApp to be conveyed by
+    // MaterialPageRoute later on.
+    return FontManager(
+      child: MaterialApp(
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark(),
+        home: LoadingPage(),
+      ),
     );
   }
 }

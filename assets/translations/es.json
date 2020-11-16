@@ -1,5 +1,12 @@
 {
+  "welcome": "TODO",
+
   "menu_text": "Elige tu Historia",
+
+  "settings_appbar": "TODO",
+  "settings_font_size": "TODO",
+  "settings_font_family": "TODO",
+  "settings_apply": "TODO",
 
   "s0_title": "El Desconocido",
   "s0_credits": "Angela Yu, https://www.appbrewery.co/",

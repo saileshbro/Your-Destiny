@@ -23,7 +23,7 @@ class _LoadingPageState extends State<LoadingPage> {
         seconds: 5,
         navigateAfterSeconds: MenuPage(),
         title: Text(
-          "Welcome to Your Destiny",
+          "welcome".tr(),
           style: TextStyle(
             fontSize: 24.0,
             color: Colors.white,

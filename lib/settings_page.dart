@@ -40,7 +40,7 @@ class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Settings',),),
+      appBar: AppBar(title: Text('settings_appbar'.tr(),),),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: Column(
@@ -49,7 +49,7 @@ class _SettingsPageState extends State<SettingsPage> {
             // Font size changing
             Row(
               children: [
-                Text('Story font size', style: TextStyle(fontSize: 20),),
+                Text('settings_font_size'.tr(), style: TextStyle(fontSize: 20),),
                 Spacer(),
                 DropdownButton(
                   value: _selectedFontSize,
@@ -64,7 +64,7 @@ class _SettingsPageState extends State<SettingsPage> {
             // Font family changing
             Row(
               children: [
-                Text('Story font', style: TextStyle(fontSize: 20),),
+                Text('settings_font_family'.tr(), style: TextStyle(fontSize: 20),),
                 Spacer(),
                 DropdownButton(
                   value: _selectedFont,
@@ -82,7 +82,7 @@ class _SettingsPageState extends State<SettingsPage> {
               InheritedFont.of(context).changeStyle(_selectedFontSize, _selectedFont);
               Preferences.saveFont(_selectedFontSize, _selectedFont);
               Navigator.pop(context);
-            }, child: Text('Apply Changes', style: TextStyle(fontSize: 20),),),
+            }, child: Text("settings_apply".tr(), style: TextStyle(fontSize: 20),),),
             Spacer(),
           ],
         ),

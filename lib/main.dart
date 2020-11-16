@@ -8,14 +8,14 @@ void main() => runApp(EasyLocalization(
     supportedLocales: [Locale('en'), Locale('pl'), Locale('es')],
     path: 'assets/translations',
     fallbackLocale: Locale('en'),
-    child: loadingPage()));
+    child: LoadingPage()));
 
-class loadingPage extends StatefulWidget {
+class LoadingPage extends StatefulWidget {
   @override
-  _loadingPageState createState() => _loadingPageState();
+  _LoadingPageState createState() => _LoadingPageState();
 }
 
-class _loadingPageState extends State<loadingPage> {
+class _LoadingPageState extends State<LoadingPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,7 +24,7 @@ class _loadingPageState extends State<loadingPage> {
         seconds: 5,
         navigateAfterSeconds: Destini(),
         title: Text(
-          "Welcome to Your Destiny",
+          "welcome".tr(),
           style: TextStyle(
             fontSize: 24.0,
             color: Colors.white,

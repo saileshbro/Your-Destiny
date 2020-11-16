@@ -8,38 +8,39 @@ void main() => runApp(EasyLocalization(
     supportedLocales: [Locale('en'), Locale('pl'), Locale('es')],
     path: 'assets/translations',
     fallbackLocale: Locale('en'),
-    child: Destini()));
+    child: loadingPage()));
 
-class LoadingPage extends StatefulWidget {
+class loadingPage extends StatefulWidget {
   @override
-  _LoadingPageState createState() => _LoadingPageState();
+  _loadingPageState createState() => _loadingPageState();
 }
 
-class _LoadingPageState extends State<LoadingPage> {
+class _loadingPageState extends State<loadingPage> {
   @override
   Widget build(BuildContext context) {
-    return SplashScreen(
+    return MaterialApp(
+      home: SplashScreen(
         backgroundColor: Colors.black,
         seconds: 5,
-        navigateAfterSeconds: MenuPage(),
+        navigateAfterSeconds: Destini(),
         title: Text(
-          "welcome".tr(),
+          "Welcome to Your Destiny",
           style: TextStyle(
             fontSize: 24.0,
             color: Colors.white,
             fontWeight: FontWeight.bold,
           ),
         ),
+        routeName: "/",
         styleTextUnderTheLoader: TextStyle(),
         loaderColor: Colors.white,
-      );
+      ),
+    );
   }
 }
 
 class Destini extends StatelessWidget {
   Widget build(BuildContext context) {
-    // Inherited widgets must be on top of the MaterialApp to be conveyed by
-    // MaterialPageRoute later on.
     return FontManager(
       child: MaterialApp(
         localizationsDelegates: context.localizationDelegates,
@@ -47,7 +48,7 @@ class Destini extends StatelessWidget {
         locale: context.locale,
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark(),
-        home: LoadingPage(),
+        home: MenuPage(),
       ),
     );
   }

@@ -12,8 +12,6 @@ class FontManager extends StatefulWidget {
   FontManager({@required this.child});
   final Widget child;
 
-  static InheritedFont of(BuildContext context) => context.dependOnInheritedWidgetOfExactType<InheritedFont>();
-
   @override
   _FontManagerState createState() => _FontManagerState();
 }

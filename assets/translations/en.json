@@ -1,5 +1,12 @@
 {
+  "welcome": "Welcome to Your Destiny",
+
   "menu_text": "Choose Your Story",
+
+  "settings_appbar": "Settings",
+  "settings_font_size": "Story font size",
+  "settings_font_family": "Story font",
+  "settings_apply": "Apply Changes",
 
   "s0_title": "The Stranger",
   "s0_credits": "Angela Yu, https://www.appbrewery.co/",

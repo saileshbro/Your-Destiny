@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_buddies_destini/font_manager.dart';
 import 'package:flutter_buddies_destini/menu_page.dart';
 import 'package:splashscreen/splashscreen.dart';
 
@@ -7,14 +8,14 @@ void main() => runApp(EasyLocalization(
     supportedLocales: [Locale('en'), Locale('pl'), Locale('es')],
     path: 'assets/translations',
     fallbackLocale: Locale('en'),
-    child: loadingPage()));
+    child: LoadingPage()));
 
-class loadingPage extends StatefulWidget {
+class LoadingPage extends StatefulWidget {
   @override
-  _loadingPageState createState() => _loadingPageState();
+  _LoadingPageState createState() => _LoadingPageState();
 }
 
-class _loadingPageState extends State<loadingPage> {
+class _LoadingPageState extends State<LoadingPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -23,7 +24,7 @@ class _loadingPageState extends State<loadingPage> {
         seconds: 5,
         navigateAfterSeconds: Destini(),
         title: Text(
-          "Welcome to Your Destiny",
+          "welcome".tr(),
           style: TextStyle(
             fontSize: 24.0,
             color: Colors.white,
@@ -40,13 +41,15 @@ class _loadingPageState extends State<loadingPage> {
 
 class Destini extends StatelessWidget {
   Widget build(BuildContext context) {
-    return MaterialApp(
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      home: MenuPage(),
+    return FontManager(
+      child: MaterialApp(
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark(),
+        home: MenuPage(),
+      ),
     );
   }
 }

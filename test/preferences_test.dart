@@ -1,3 +1,7 @@
+/* This test focuses on shared preferences. Both general behaviour of SP and
+* custom methods of Preferences class are being tester.
+*                                                              - by Tragikomedes */
+
 import 'package:test/test.dart';
 import 'package:flutter_buddies_destini/preferences.dart';
 import 'package:shared_preferences/shared_preferences.dart';

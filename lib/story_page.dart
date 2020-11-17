@@ -39,12 +39,16 @@ class _StoryPageState extends State<StoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(storyBrain.getTitle().tr(), style: _style,)),
+      appBar: AppBar(
+          title: Text(
+        storyBrain.getTitle().tr(),
+        style: _style,
+      )),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             // TODO change background image.
-            image: AssetImage('images/background.png'),
+            image: AssetImage('images/creepy.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -57,13 +61,11 @@ class _StoryPageState extends State<StoryPage> {
               Expanded(
                 flex: 12,
                 child: Center(
-                  child: Text(
-                    storyBrain.getPage().text.tr(),
-                    style: _style
-                  ),
+                  child: Text(storyBrain.getPage().text.tr(), style: _style),
                 ),
               ),
-              ...choiceButtonList(storyBrain.getPage(), refreshStoryPage, _style),
+              ...choiceButtonList(
+                  storyBrain.getPage(), refreshStoryPage, _style),
             ],
           ),
         ),
@@ -72,7 +74,8 @@ class _StoryPageState extends State<StoryPage> {
   }
 }
 
-List<Widget> choiceButtonList(SPage storyPage, Function refreshStoryPage, TextStyle style) {
+List<Widget> choiceButtonList(
+    SPage storyPage, Function refreshStoryPage, TextStyle style) {
   int numButtons = storyPage.choices.length;
   List<Widget> toReturn = List<Widget>();
   for (int i = 0; i < numButtons; i++) {
@@ -88,7 +91,8 @@ List<Widget> choiceButtonList(SPage storyPage, Function refreshStoryPage, TextSt
   return toReturn;
 }
 
-Widget choiceButton({String text, TextStyle style, int index, Function refreshStoryPage}) {
+Widget choiceButton(
+    {String text, TextStyle style, int index, Function refreshStoryPage}) {
   return Padding(
     padding: EdgeInsets.symmetric(horizontal: 10.0),
     child: FlatButton(
@@ -97,10 +101,7 @@ Widget choiceButton({String text, TextStyle style, int index, Function refreshSt
         refreshStoryPage(index);
       },
       color: Colors.red,
-      child: Text(
-        text,
-        style: style
-      ),
+      child: Text(text, style: style),
     ),
   );
 }

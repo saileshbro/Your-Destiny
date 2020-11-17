@@ -10,23 +10,30 @@ import 'package:flutter_buddies_destini/font_manager.dart';
 
 void main() {
   enableFlutterDriverExtension();
-  runApp(
-    FontManager(
-      child: MaterialApp(
-        home: MockWidget(),
-      ),
-    )
-  );
+  runApp(FontManager(
+    child: MaterialApp(
+      home: MockWidget(),
+    ),
+  ));
 }
 
 class MockWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
-      Text(InheritedFont.of(context).style.fontFamily, key: ValueKey('font family'),),
-      Text(InheritedFont.of(context).style.fontSize.toInt().toString(), key: ValueKey('font size')),
-      FlatButton(onPressed: () {
-        InheritedFont.of(context).changeStyle(12, 'Pacifico');
-      }, child: Text('This changes text style'), key: ValueKey('change style button'),)]);
+      Text(
+        InheritedFont.of(context).style.fontFamily,
+        key: ValueKey('font family'),
+      ),
+      Text(InheritedFont.of(context).style.fontSize.toInt().toString(),
+          key: ValueKey('font size')),
+      FlatButton(
+        onPressed: () {
+          InheritedFont.of(context).changeStyle(12, 'Pacifico');
+        },
+        child: Text('This changes text style'),
+        key: ValueKey('change style button'),
+      )
+    ]);
   }
 }

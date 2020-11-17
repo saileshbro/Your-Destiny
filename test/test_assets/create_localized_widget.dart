@@ -9,12 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 
 Widget createLocalizedWidget(Widget child, [Locale locale]) => EasyLocalization(
-  path: 'assets/translations',
-  supportedLocales: [Locale('en'), Locale('pl'), Locale('es')],
-  saveLocale: false,
-  startLocale: locale ?? Locale('en'),
-  fallbackLocale: const Locale('en'),
-  child: MaterialApp(
-    home: child,
-  ),
-);
+      path: 'assets/translations',
+      supportedLocales: [Locale('en'), Locale('pl'), Locale('es')],
+      saveLocale: false,
+      startLocale: locale ?? Locale('en'),
+      fallbackLocale: const Locale('en'),
+      child: MaterialApp(
+        home: child,
+      ),
+    );

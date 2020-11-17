@@ -13,7 +13,7 @@ void main() {
     final changeStyleButton = find.byValueKey('change style button');
 
     FlutterDriver driver;
-    
+
     setUpAll(() async {
       driver = await FlutterDriver.connect();
     });
@@ -24,12 +24,16 @@ void main() {
       }
     });
 
-    test('Given access to inherited widget When no changes happen Then descendant shows default value', () async {
+    test(
+        'Given access to inherited widget When no changes happen Then descendant shows default value',
+        () async {
       expect(await driver.getText(fontSizeText), 18.toString());
       expect(await driver.getText(fontFamilyText), 'Roboto');
     });
 
-    test('Given access to inherited widget When the value of parent stateful widget changes Then inherited widget conveys changes to descendant', () async {
+    test(
+        'Given access to inherited widget When the value of parent stateful widget changes Then inherited widget conveys changes to descendant',
+        () async {
       expect(await driver.getText(fontSizeText), 18.toString());
       expect(await driver.getText(fontFamilyText), 'Roboto');
 
@@ -39,7 +43,4 @@ void main() {
       expect(await driver.getText(fontFamilyText), 'Pacifico');
     });
   });
-
 }
-
-

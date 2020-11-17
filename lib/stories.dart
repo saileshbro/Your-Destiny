@@ -147,6 +147,77 @@ final stories = [
       ),
     ],
   ),
+
+  //Based on the story of I.T.
+  Story(
+    title: "s2_title",
+    pages: [
+      SPage(
+        pageIndex: 0,
+        text: 's2_p0_text',
+        choices: [
+          Choice(
+            text: 's2_p0_c0',
+            pagePointer: 1,
+          ),
+          Choice(
+            text: 's2_p0_c1',
+            pagePointer: 3,
+          ),
+        ],
+      ),
+      SPage(
+        pageIndex: 1,
+        text: 's2_p1_text',
+        choices: [
+          Choice(
+            text: 's2_p1_c0',
+            pagePointer: 3,
+          ),
+          Choice(
+            text: 's2_p1_c1',
+            pagePointer: 2,
+          )
+        ],
+      ),
+      SPage(
+        pageIndex: 2,
+        text: 's2_p2_text',
+        choices: [
+          Choice(text: 's2_p2_c0', pagePointer: 3),
+          Choice(text: 's2_p2_c1', pagePointer: 6)
+        ],
+      ),
+      SPage(
+        pageIndex: 3,
+        text: 's2_p3_text',
+        choices: [
+          Choice(text: 's2_p3_c0', pagePointer: 4),
+        ],
+      ),
+      SPage(
+        pageIndex: 4,
+        text: 's2_p4_text',
+        choices: [
+          Choice(text: 's2_p4_c0', pagePointer: 5),
+        ],
+      ),
+      SPage(
+        pageIndex: 5,
+        text: 's2_p5_text',
+        choices: [
+          Choice(text: 's2_p5_c0', pagePointer: null),
+        ],
+      ),
+      SPage(
+        pageIndex: 6,
+        text: 's2_p6_text',
+        choices: [
+          Choice(text: 's2_p6_c0', pagePointer: null),
+        ],
+      ),
+    ],
+  ),
 ];
 
 // This function is only called via story_brain.dart to get a story from the

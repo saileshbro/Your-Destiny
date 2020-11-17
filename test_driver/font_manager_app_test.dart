@@ -1,5 +1,6 @@
 /* This is an integration test that focuses on the inherited widget that
-* handles text style changes. To run, open the terminal and enter:
+* handles text style changes. To run, start an emulator or connect device,
+* open the terminal and enter:
 * flutter drive --target=test_driver/font_manager_app.dart
 *                                                           - by Tragikomedes */
 

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_buddies_destini/stories.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'story_page.dart';
+import 'package:flutter_buddies_destini/credits.dart';
+import 'package:flutter_buddies_destini/settings_page.dart';
+import 'package:flutter_buddies_destini/stories.dart';
+import 'package:flutter_buddies_destini/story_page.dart';
 
 class MenuPage extends StatelessWidget {
   @override
@@ -12,6 +14,10 @@ class MenuPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          Align(
+            alignment: Alignment.centerRight,
+            child: LanguageChangeButton(),
+          ),
           SizedBox(
             height: 20,
           ),
@@ -25,15 +31,39 @@ class MenuPage extends StatelessWidget {
           Flexible(
             child: StoryList(),
           ),
-          Align(
-              alignment: Alignment.bottomRight,
-              child: Padding(
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: CreditsButton(),
+              ),
+              Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: OptionsButton(),
-              ))
+              )
+            ],
+          ),
         ],
       ),
     ));
+  }
+}
+
+// Added a button to change languages - Tragikomedes
+class LanguageChangeButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButton(
+      value: context.locale,
+      onChanged: (newLocale) {
+        context.locale = newLocale;
+      },
+      items: context.supportedLocales
+          .map((locale) => DropdownMenuItem(
+              value: locale, child: Text(locale.languageCode.toUpperCase())))
+          .toList(),
+    );
   }
 }
 
@@ -69,8 +99,10 @@ class OptionsButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // TODO Make the options work
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => SettingsPage()));
+      },
       child: Icon(
         Icons.settings,
         color: Theme.of(context).secondaryHeaderColor,
@@ -80,10 +112,30 @@ class OptionsButton extends StatelessWidget {
   }
 }
 
+class CreditsButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => CreditsPage()));
+      },
+      child: Icon(
+        Icons.info,
+        color: Theme.of(context).secondaryHeaderColor,
+        size: 50,
+      ),
+    );
+  }
+}
+
 class StoryTile extends StatelessWidget {
-  final int index;
-  final String title; // <<< We may not even need this variable.
-  // ^^^ All of the stories are indexed
+  final int index; // Index of the story from stories.dart => stories[]
+  // Possible options are currently:
+  //   - 0: The Stranger
+  //   - 1: The Red Letter
+
+  final String title; // This is the story title to be translated.
 
   StoryTile({@required this.index}) : this.title = stories[index].title;
 
@@ -94,10 +146,11 @@ class StoryTile extends StatelessWidget {
       child: ListTile(
           title: Text(
             title.tr(),
+            // tr() is used to grab the translated text via the easy_localization package
             textAlign: TextAlign.center,
           ),
           onTap: () {
-            // All tiles push to the default story as of now
+            // When a story button is tapped, the app routes to the corresponding story pageIndex 0.
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => StoryPage(index)));
           }),

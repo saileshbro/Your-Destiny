@@ -1,7 +1,15 @@
 {
+  "welcome": "Welcome to Your Destiny",
+
   "menu_text": "Choose Your Story",
 
+  "settings_appbar": "Settings",
+  "settings_font_size": "Story font size",
+  "settings_font_family": "Story font",
+  "settings_apply": "Apply Changes",
+
   "s0_title": "The Stranger",
+  "s0_credits": "Angela Yu, https://www.appbrewery.co/",
   "s0_p0_text": "Your car has blown a tire on a winding road in the middle of nowhere with no cell phone reception. You decide to hitchhike. A rusty pickup truck rumbles to a stop next to you. A man with a wide brimmed hat with soulless eyes opens the passenger door for you and asks: \"Need a ride, boy?\".",
   "s0_p0_c0": "\"I'll hop in. Thanks for the help!\"",
   "s0_p0_c1": "Better ask him if he's a murderer first...",
@@ -19,6 +27,7 @@
   "s0_p5_c0": "Restart",
 
   "s1_title": "The Red Letter",
+  "s1_credits": "Ben Wreford, Grade 9, Kent Street Senior High School",
   "s1_p0_text": "After a long hard day at your boring office job you arrive at home. Before you walk into your house you see a letter in your mailbox, an unusual occurrence as bill day is Thursday not Monday. You go up to the mailbox and see that there is a little red letter—quite suspicious.",
   "s1_p0_c0": "Open mail",
   "s1_p0_c1": "Go inside",
@@ -32,5 +41,27 @@
   "s1_p4_text": "You decide to stand your ground. The car is getting dangerously close to you. Five seconds feels like it has been an hour. The car is getting nearer and you are regretting your decision. You can now see the red hood of the car coming towards you. Just as you get ready for the numbing pain of the car hitting you it screeches to a stop. A suited man comes out of the car and he is holding a hand gun. “Where is the money?” the man shouts at you.",
   "s1_p4_c0": "Run away",
   "s1_p5_text": "You decide to run away. In the distance you hear a car. Its headlights are getting closer. You take a left turn into a dark alleyway and end up behind a small boat house. You see the car speed past you and you decide to flank it. You run onto the main road and lose it. It only took you ten minutes to find the police station nearest to you. Once you arrive you quickly tell your story. Thirty minutes later the police sergeant returns looking happy with himself. He tells you that you were the bait in a drug bust and now you are a key person in the crime of the year.",
-  "s1_p5_c0": "Restart"
+  "s1_p5_c0": "Restart",
+
+  "s2_title": "The Kind Klown",
+  "s2_credits": "Stephen King, https://stephenking.com/",
+  "s2_p0_text": "During the Summer of 1999, you get separated from your parents at the circus. A strange Clown walks over to you and asks if you would like some help.",
+  "s2_p0_c0": "Accept the help",
+  "s2_p0_c1": "Run",
+  "s2_p1_text": " You accept the strange clowns help then he carries you over to a tent with some creepy stuffed animals. The hand of a large stuff monkey falls on your shoulder then you jump! The clown asks, 'Do you want me to help you find your parents?'",
+  "s2_p1_c0": "Run for the it!",
+  "s2_p1_c1": "Ask him if he kidnaps children",
+  "s2_p2_text": " He answers, 'No! I only kidnap stuffed animals.' You become too frightened then proceed to run out of the tent and stumble into a house of mirrors. The clown starts to chase you with a knife. ",
+  "s2_p2_c0": "You start to run for your life",
+  "s2_p2_c1": "Call for your parents",
+  "s2_p3_text": "You frantically run through a house of mirrors unable to tell where the exit is. Suddenly in front of you is the very clown you have been running from. You trip and a bottle of water from your pocket falls to the ground. The clown suddenly starts to back away after seeing the water.",
+  "s2_p3_c0": "Open the bottle and throw water at the clown",
+
+  "s2_p4_text": " As you throw the water the clown starts to cry out in pain. After the entire bottle of water gets emptied, the clown disappears. You suddenly find yourself back at the main part of the circus with your parents hovering over you. They hug you tightly and decide that it is time to go home.",
+  "s2_p4_c0": "Go with your parents",
+
+  "s2_p5_text": "As you are walking away with your parents, you start to hear a creepy laugh in the distance. You turn around only to see a large stuffed animal about 2 meters away smiling.",
+  "s2_p5_c0": "Restart",
+  "s2_p6_text": "You suddenly wake up and your parents are hovering over you. They carry you home while uttering the words, 'I can't believe he fainted after visiting the clown booth'",
+  "s2_p6_c0": "Restart"
 }

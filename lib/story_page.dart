@@ -1,8 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'story_brain.dart';
-import 'story.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'font_manager.dart';
+import 'package:flutter_buddies_destini/story_brain.dart';
+import 'package:flutter_buddies_destini/story.dart';
 
 class StoryPage extends StatefulWidget {
   final int index;
@@ -15,7 +15,19 @@ class StoryPage extends StatefulWidget {
 
 class _StoryPageState extends State<StoryPage> {
   final int index;
+  TextStyle _style = TextStyle();
+
   _StoryPageState(this.index);
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      setState(() {
+        _style = InheritedFont.of(context).style;
+      });
+    });
+  }
 
   void refreshStoryPage(int newPageIndex) {
     setState(() {
@@ -27,12 +39,16 @@ class _StoryPageState extends State<StoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(storyBrain.getTitle().tr())),
+      appBar: AppBar(
+          title: Text(
+        storyBrain.getTitle().tr(),
+        style: _style,
+      )),
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
             // TODO change background image.
-            image: AssetImage('images/background.png'),
+            image: AssetImage('images/creepy.jpg'),
             fit: BoxFit.cover,
           ),
         ),
@@ -45,15 +61,11 @@ class _StoryPageState extends State<StoryPage> {
               Expanded(
                 flex: 12,
                 child: Center(
-                  child: Text(
-                    storyBrain.getPage().text.tr(),
-                    style: TextStyle(
-                      fontSize: 25.0,
-                    ),
-                  ),
+                  child: Text(storyBrain.getPage().text.tr(), style: _style),
                 ),
               ),
-              ...choiceButtonList(storyBrain.getPage(), refreshStoryPage),
+              ...choiceButtonList(
+                  storyBrain.getPage(), refreshStoryPage, _style),
             ],
           ),
         ),
@@ -62,13 +74,15 @@ class _StoryPageState extends State<StoryPage> {
   }
 }
 
-List<Widget> choiceButtonList(SPage storyPage, Function refreshStoryPage) {
+List<Widget> choiceButtonList(
+    SPage storyPage, Function refreshStoryPage, TextStyle style) {
   int numButtons = storyPage.choices.length;
   List<Widget> toReturn = List<Widget>();
   for (int i = 0; i < numButtons; i++) {
     toReturn.add(
       choiceButton(
         text: storyPage.choices[i].text.tr(),
+        style: style,
         index: i,
         refreshStoryPage: refreshStoryPage,
       ),
@@ -77,7 +91,8 @@ List<Widget> choiceButtonList(SPage storyPage, Function refreshStoryPage) {
   return toReturn;
 }
 
-Widget choiceButton({String text, int index, Function refreshStoryPage}) {
+Widget choiceButton(
+    {String text, TextStyle style, int index, Function refreshStoryPage}) {
   return Padding(
     padding: EdgeInsets.symmetric(horizontal: 10.0),
     child: FlatButton(
@@ -86,12 +101,7 @@ Widget choiceButton({String text, int index, Function refreshStoryPage}) {
         refreshStoryPage(index);
       },
       color: Colors.red,
-      child: Text(
-        text,
-        style: TextStyle(
-          fontSize: 20.0,
-        ),
-      ),
+      child: Text(text, style: style),
     ),
   );
 }

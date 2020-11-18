@@ -6,6 +6,10 @@ import 'package:flutter_buddies_destini/story.dart';
 // TODO: I, added story credits in each of the translation files. The credits
 //       should be translated to each appropriate language. I'd do this myself, but
 //       I only speak two languages fluently: English and Drunken English. -Hans
+
+//       I would love to hear more about this language called Drunken  english.
+//       There is no longer a need for the story credits you added since I created a
+//       credits page.     -Rift3000
 final stories = [
   // The Stranger
   Story(

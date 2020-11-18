@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_buddies_destini/credits.dart';
 import 'package:flutter_buddies_destini/settings_page.dart';
 import 'package:flutter_buddies_destini/stories.dart';
 import 'package:flutter_buddies_destini/story_page.dart';
@@ -30,12 +31,19 @@ class MenuPage extends StatelessWidget {
           Flexible(
             child: StoryList(),
           ),
-          Align(
-              alignment: Alignment.bottomRight,
-              child: Padding(
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: CreditsButton(),
+              ),
+              Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: OptionsButton(),
-              ))
+              )
+            ],
+          ),
         ],
       ),
     ));
@@ -44,19 +52,20 @@ class MenuPage extends StatelessWidget {
 
 // Added a button to change languages - Tragikomedes
 class LanguageChangeButton extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return DropdownButton(
       value: context.locale,
-        onChanged: (newLocale) {
+      onChanged: (newLocale) {
         context.locale = newLocale;
-        },
-    items: context.supportedLocales.map((locale) => DropdownMenuItem(value: locale, child: Text(locale.languageCode.toUpperCase()))).toList(),);
+      },
+      items: context.supportedLocales
+          .map((locale) => DropdownMenuItem(
+              value: locale, child: Text(locale.languageCode.toUpperCase())))
+          .toList(),
+    );
   }
 }
-
-
 
 class StoryList extends StatelessWidget {
   @override
@@ -91,7 +100,8 @@ class OptionsButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => SettingsPage()));
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => SettingsPage()));
       },
       child: Icon(
         Icons.settings,
@@ -102,11 +112,28 @@ class OptionsButton extends StatelessWidget {
   }
 }
 
+class CreditsButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => CreditsPage()));
+      },
+      child: Icon(
+        Icons.info,
+        color: Theme.of(context).secondaryHeaderColor,
+        size: 50,
+      ),
+    );
+  }
+}
+
 class StoryTile extends StatelessWidget {
-  final int index;    // Index of the story from stories.dart => stories[]
-                      // Possible options are currently:
-                      //   - 0: The Stranger
-                      //   - 1: The Red Letter
+  final int index; // Index of the story from stories.dart => stories[]
+  // Possible options are currently:
+  //   - 0: The Stranger
+  //   - 1: The Red Letter
 
   final String title; // This is the story title to be translated.
 

@@ -41,5 +41,25 @@
   "s1_p4_text": "Decides defender to posición. El carro se acerca peligrosamente. Cinco segundos parecen ser una hora. El carro se acerca aún más y estás lamentando tu decisión. Puedes ver el capó rojo del carro acercandose a ti. Justo cuando te preparas para el dolor entumecedor del impacto, el carro para con un chillido de las llantas. Un hombre en traje sale del carro y lleva una pistola. “¿Dónde está el dinero?” grita el hombre",
   "s1_p4_c0": "Huir",
   "s1_p5_text": "Decides huir. En la distancia oyes un carro. Sus faros se acercan. Doblas a la izquierda en un callejón oscuro y terminas detrás de una casita del barco. Ves el carro pasarte y decides flanquearlo. Corres a la calle principal y ya no lo ves. Solamente te duró diez minutos en encontrar la estación de la policía más cercana. Al llegar, relatas tu historia rápidamente. Después de treinta minutos el sargento de la policia regresa orgullosamente. Te dice que fuiste el cebo para una redada antidrogas y ahora eres un testigo clave del crimen del año",
-  "s1_p5_c0": "Reiniciar"
+  "s1_p5_c0": "Reiniciar",
+
+  "s2_title": "El Payaso Amable",
+  "s2_credits": "Stephen King, https://stephenking.com/",
+  "s2_p0_text": "Durante el verano de 1999, te seperas de tus padres en el circo. Un payaso extraño camina hacia ti y le pregunta si te gustaría ayuda.",
+  "s2_p0_c0": "Aceptar la ayuda",
+  "s2_p0_c1": "Huir",
+  "s2_p1_text": "Aceptas la ayuda del payaso extraño y él te lleva a una carpa llena con peluches siniestras. ¡El mano de un mono grande relleno cae encima de te hombro y saltas de la sorpresa! El payaso le pregunta, '¿Quieres que te ayudo a encontrar tus padres?'",
+  "s2_p1_c0": "¡Huir mientras pueda!",
+  "s2_p1_c1": "Pregunatarle si secuestra a los niños",
+  "s2_p2_text": "Él responde, '¡No! Yo solo secuestro a las peluches.' Te pones demasiado asustado y procedes salir de la carpa corriendo y tropiezas dentro de una casa de espejos. El payaso empieza a perseguirte con un cuchillo. ",
+  "s2_p2_c0": "Empiezas correr por tú vida",
+  "s2_p2_c1": "Gritar por sus padres",
+  "s2_p3_text": "Frenéticamente tú corres por la casa de espejos sin saber donde econtrar el éxito. De repente el payaso que te ha estado persiguiendo aparece frente de ti. Te caes y una botalla de agua cae hacia la tierra desde su bolsillo. El payaso, al ver el agua, empieza retroceder cuidadosamente.",
+  "s2_p3_c0": "Abrir la botalla y tirar el agua hacia el payaso",
+  "s2_p4_text": "Mientras que tiras el agua el payaso empieza gritar del dolor. Despúes de que hayas viaciado la botalla entera, el payaso se desaparece. De repente te hallas en la parte principal del circu con sus padres de nuevo. Ellos te dan un abrazo apretado y deciden que ya es hora regresar a casa.",
+  "s2_p4_c0": "Salir con sus padres",
+  "s2_p5_text": "Mientras caminas son sus padres, oyes risa espeluznante en la distancia. Te das vuelta y ves una gran peluche sonriendo a 2 metros de ti mismo.",
+  "s2_p5_c0": "Reiniciar",
+  "s2_p6_text": "De repente te despiertas y tus padres están a tu lado mirandote. Te llevan a la casa susurrando las palabras, 'No puedo creer que se demayó después de visitar el puesto del payaso.'",
+  "s2_p6_c0": "Reiniciar"
 }

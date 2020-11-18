@@ -1,12 +1,12 @@
 {
-  "welcome": "TODO",
+  "welcome": "Bienvenido a tu Destino",
 
   "menu_text": "Elige tu Historia",
 
-  "settings_appbar": "TODO",
-  "settings_font_size": "TODO",
-  "settings_font_family": "TODO",
-  "settings_apply": "TODO",
+  "settings_appbar": "Ajustes",
+  "settings_font_size": "Tamaño del tipo de letra",
+  "settings_font_family": "Tipo de letra del cuento",
+  "settings_apply": "Applicar los Cambios",
 
   "s0_title": "El Desconocido",
   "s0_credits": "Angela Yu, https://www.appbrewery.co/",

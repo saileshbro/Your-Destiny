@@ -41,5 +41,25 @@
   "s1_p4_text": "Decydujesz się zostać. Samochód jest już niebezpiecznie blisko. Pięc sekund wydaje się być godziną. Auto zbliża się i żałujesz swojego wyboru. Dostrzegasz czerwoną karoserię zbliżającego się samochodu. Gdy zaczynasz przygotowywać się na oszałamiający ból uderzającego cię pojazdu, auto zatrzymuje się z piskiem opon. Wychodzi z niego mężczyzna trzymający pistolet. \"Gdzie masz kasę?\" - krzyczy do ciebie.",
   "s1_p4_c0": "Ucieknij",
   "s1_p5_text": "Decydujesz się uciec. W oddali słyszysz samochód. Jego światła zbliżają się. Skręcasz w ciemną alejkę po lewej. Znajdujesz się na tyłach małego składu na łodzie. Auto mija cię. Decydujesz się je obejść. Wybiegasz na główną drogę i gubisz pościg. Znalezienie komisariatu zajęło ci 10 minut. Relacjonujesz tam swoją historię. Po 30 minutach powraca zadowolony sierżant. Mówi, że wykorzystano cię jako przynęte na mafię narkotykową i jesteś teraz kluczowym świadkiem w największej sprawie kryminalnej roku.",
-  "s1_p5_c0": "Restart"
+  "s1_p5_c0": "Restart",
+
+  "s2_title": "Przyjazny Klaun",
+  "s2_credits": "Stephen King, https://stephenking.com/",
+  "s2_p0_text": "Latem 1999 r. gubisz swoich rodziców w cyrku. Dziwny klaun podchodzi do ciebie i pyta, czy nie potrzebujesz pomocy.",
+  "s2_p0_c0": "Przyjmij pomoc",
+  "s2_p0_c1": "Uciekaj",
+  "s2_p1_text": "Przyjmujesz pomoc dziwnego klauna. Zabiera cię do namiotu z niepokojącymi wypchanymi zwierzętami. Podskakujesz, gdy na twoje ramię spada dłoń wielkiej wypchanej małpy. Klaun pyta: 'Czy chcesz, abym pomógł ci znaleźć rodziców?'",
+  "s2_p1_c0": "Bierz nogi za pas!",
+  "s2_p1_c1": "Spytaj go, czy porywa dzieci",
+  "s2_p2_text": "Odpowiada: 'Nie, porywam tylko wypchane zwierzęta'. Czujesz obezwładniający strach. Wybiegasz z namiotu i wpadasz do domu luster. Klaun goni cię z nożem. ",
+  "s2_p2_c0": "Zaczynasz biec najszybciej jak umiesz",
+  "s2_p2_c1": "Zawołaj rodziców",
+  "s2_p3_text": "Szalonym biegiem przemierasz dom luster. Nie masz pojęcia, gdzie jest wyjście. Przed tobą nagle pojawia się klaun. TEN klaun. Przewracasz się, a z kieszeni wypada ci butelka wody. Klaun, ujrzywszy ją, zaczyna się odsuwać.",
+  "s2_p3_c0": "Otwórz butelkę i wylej zawartość na klauna",
+  "s2_p4_text": "Klaun krzyczy z bólu, gdy oblewasz go wodą. Po opróżnieniu butelki klaun znika. Znajdujesz się nagle ponownie w centralnej części cyrku. Widzisz pochylonych nad tobą rodziców. Mocno cię przytulają i mówią, że czas już wracać do domu.",
+  "s2_p4_c0": "Idź z rodzicami",
+  "s2_p5_text": "Idąc, twych uszu dochodzi nagle upiorny śmiech. Odwracasz się i zauważasz, że za tobą stoi dwumetrowe wypchane zwierzę.",
+  "s2_p5_c0": "Restart",
+  "s2_p6_text": "Nagle budzisz się i widzisz pochylonych nad tobą rodziców. Zabierają cię do domu, mamrocząc: 'To niemożliwe, że zemdlał po wizycie w budce klauna.'",
+  "s2_p6_c0": "Restart"
 }

@@ -3,13 +3,6 @@ import 'package:flutter_buddies_destini/story.dart';
 // The logic for each story is defined below.  However, the translations for each
 // story are defined in assets/translations/<lang>.json
 
-// TODO: I, added story credits in each of the translation files. The credits
-//       should be translated to each appropriate language. I'd do this myself, but
-//       I only speak two languages fluently: English and Drunken English. -Hans
-
-//       I would love to hear more about this language called Drunken  english.
-//       There is no longer a need for the story credits you added since I created a
-//       credits page.     -Rift3000
 final stories = [
   // The Stranger
   Story(
@@ -155,6 +148,7 @@ final stories = [
   //Based on the story of I.T.
   Story(
     title: "s2_title",
+    credits: "s2_credits",
     pages: [
       SPage(
         pageIndex: 0,
@@ -228,4 +222,8 @@ final stories = [
 // stories list by index. It returns the story from stories[] at the given index.
 getStory(int index) {
   return stories[index];
+}
+
+List<Story> getAllStories() {
+  return stories;
 }

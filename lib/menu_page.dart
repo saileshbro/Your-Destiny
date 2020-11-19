@@ -134,6 +134,7 @@ class StoryTile extends StatelessWidget {
   // Possible options are currently:
   //   - 0: The Stranger
   //   - 1: The Red Letter
+  //   - 2: The Kind Klown
 
   final String title; // This is the story title to be translated.
 

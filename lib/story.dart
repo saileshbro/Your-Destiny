@@ -21,7 +21,8 @@ class Story {
 //  - pageIndex is used for page reference between each page
 //  - choices list of the available choices
 //  - background? I don't know what this is for... I don't think its being used right now.
-class SPage { // I had to change the class name from Page to SPage because my IDE was getting confused with the Flutter Page class
+class SPage {
+  // I had to change the class name from Page to SPage because my IDE was getting confused with the Flutter Page class
   String text;
   int pageIndex;
   List<Choice> choices;

@@ -27,6 +27,11 @@ class StoryBrain {
     return _storyData.title;
   }
 
+  // returns the credits for the current Story
+  String getCredits() {
+    return _storyData.title + " " + _storyData.credits;
+  }
+
   // reutrns the current Page of the current Story
   SPage getPage() {
     return _storyData.pages[_pageNumber];

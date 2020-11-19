@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_buddies_destini/stories.dart';
 
 /*  A simple credits page was created in order to
 highlight the creators of the story and the developers that worked on the project
@@ -8,109 +10,59 @@ class CreditsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double headLine = 35.0;
-    double regularText = 20.0;
+
+    final allStoryList = getAllStories();
+    final developers = ["Tragikomedes", "hanskokx", "ion05", "goober0329", "Rift3000"];
 
     return Scaffold(
+      appBar: AppBar(),
       body: Center(
         child: Column(
           children: [
             SizedBox(
-              height: 45.0,
+              height: 60.0,
+              child: Center(
+                child: Text(
+                  "credits_story".tr(),
+                  style: TextStyle(
+                    fontSize: headLine,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
             ),
-            Text(
-              "Story Credits",
-              style: TextStyle(
-                fontSize: headLine,
-                decoration: TextDecoration.underline,
-                fontWeight: FontWeight.bold,
+            Expanded(
+              child: ListView.builder(
+                itemCount: allStoryList.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text(allStoryList[index].title.tr()),
+                    subtitle: Text(allStoryList[index].credits.tr()),
+                  );
+                },
               ),
             ),
             SizedBox(
-              height: 10.0,
-            ),
-            Text(
-              "The Stranger from AppBrewry's\n Flutter Development Course",
-              style: TextStyle(fontSize: regularText),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Text(
-              "The Red Letter by \nBen Wreford Grade 9, \nKent Street Senior High School",
-              style: TextStyle(fontSize: regularText),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            Text(
-              "The Kind Klown inspired by\n Stephen King's I.T",
-              style: TextStyle(
-                fontSize: regularText,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Text(
-              "Developers",
-              style: TextStyle(
-                fontSize: headLine,
-                decoration: TextDecoration.underline,
-                fontWeight: FontWeight.bold,
+              height: 60.0,
+              child: Center(
+                child: Text(
+                  "credits_developers".tr(),
+                  style: TextStyle(
+                    fontSize: headLine,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Text(
-              "Tragikomedes",
-              style: TextStyle(
-                fontSize: regularText,
+            Expanded(
+              child: ListView.builder(
+                itemCount: developers.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text(developers[index])
+                  );
+                },
               ),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Text(
-              "hansxkokx",
-              style: TextStyle(
-                fontSize: regularText,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Text(
-              "ion05",
-              style: TextStyle(
-                fontSize: regularText,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Text(
-              "goober0329",
-              style: TextStyle(
-                fontSize: regularText,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            Text(
-              "Rift3000",
-              style: TextStyle(
-                fontSize: regularText,
-              ),
-              textAlign: TextAlign.center,
             ),
           ],
         ),

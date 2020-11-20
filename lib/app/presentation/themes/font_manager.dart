@@ -5,11 +5,11 @@
 *                                                           - by Tragikomedes*/
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_buddies_destini/preferences.dart';
+import 'package:flutter_buddies_destini/app/services/shared_preferences.dart';
 
 
 class FontManager extends StatefulWidget {
-  FontManager({@required this.child});
+  const FontManager({@required this.child});
   final Widget child;
 
   @override
@@ -24,8 +24,8 @@ class _FontManagerState extends State<FontManager> {
   void initState() {
     // Info retrieved from shared preferences
     Preferences.loadFont().then((fontInfo) => setState(() {
-      fontSize = fontInfo['fontSize'];
-      font = fontInfo['font'];
+      fontSize = fontInfo['fontSize'] as int;
+      font = fontInfo['font'] as String;
     }));
     super.initState();
   }
@@ -52,6 +52,7 @@ class InheritedFont extends InheritedWidget {
   ),
   super(child: child);
 
+  @override
   final Widget child;
   final String font;
   final int fontSize;

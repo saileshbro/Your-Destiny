@@ -1,5 +1,6 @@
-import 'package:flutter_buddies_destini/stories.dart';
-import 'package:flutter_buddies_destini/story.dart';
+import '../data/models/choice_model.dart';
+import '../data/models/models.dart';
+import '../data/provider/stories.dart';
 
 // global StoryBrain variable that holds all of the story logic
 StoryBrain storyBrain = StoryBrain();
@@ -29,7 +30,7 @@ class StoryBrain {
 
   // returns the credits for the current Story
   String getCredits() {
-    return _storyData.title + " " + _storyData.credits;
+    return "${_storyData.title} ${_storyData.credits}";
   }
 
   // reutrns the current Page of the current Story
@@ -44,7 +45,7 @@ class StoryBrain {
 
   // sets the _pageNumber variable based on the users choice
   void nextPage(int choiceIndex) {
-    Choice c = getChoice(choiceIndex);
+    final Choice c = getChoice(choiceIndex);
     // if the choice pagePointer variable is null, then the story returns to the first page. --> story restarts
     _pageNumber = c.pagePointer ?? 0;
   }

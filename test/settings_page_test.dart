@@ -2,11 +2,12 @@
 * language version. The functionality of changing settings is not tested here.
 *                                                           - by Tragikomedes*/
 
-import 'test_assets/create_localized_widget.dart';
-import 'package:flutter_buddies_destini/font_manager.dart';
-import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_buddies_destini/settings_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_buddies_destini/app/presentation/pages/settings_page.dart';
+import 'package:flutter_buddies_destini/app/presentation/themes/font_manager.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+import 'test_assets/create_localized_widget.dart';
 
 void main() {
   group('Settings page', () {
@@ -37,7 +38,7 @@ void main() {
               font: 'Roboto',
               changeStyle: () {},
               child: SettingsPage()),
-          Locale('pl')));
+          const Locale('pl')));
       await tester.pumpAndSettle();
 
       final title = find.text("Ustawienia");

@@ -3,7 +3,7 @@
 *                                                              - by Tragikomedes */
 
 import 'package:test/test.dart';
-import 'package:flutter_buddies_destini/preferences.dart';
+import 'package:flutter_buddies_destini/app/services/shared_preferences.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
@@ -12,9 +12,9 @@ void main() {
         'Given an instance of shared preferences When font size and family are saved and retrieved Then return map with data',
         () async {
       SharedPreferences.setMockInitialValues({});
-      SharedPreferences prefs = await SharedPreferences.getInstance();
-      String font = 'Lato';
-      int fontSize = 22;
+      final SharedPreferences prefs = await SharedPreferences.getInstance();
+      const String font = 'Lato';
+      const int fontSize = 22;
 
       prefs.setString('font', font);
       prefs.setInt('fontSize', fontSize);
@@ -27,11 +27,11 @@ void main() {
         'Given the access to Preferences class When font info is saved Then the info should be succesfully retrieved',
         () async {
       SharedPreferences.setMockInitialValues({});
-      SharedPreferences prefs = await SharedPreferences.getInstance();
+      final SharedPreferences prefs = await SharedPreferences.getInstance();
 
       Preferences.saveFont(12, 'Pacifico', prefs);
 
-      Map<String, dynamic> result = await Preferences.loadFont(prefs);
+      final Map<String, dynamic> result = await Preferences.loadFont(prefs);
       expect(result['font'], 'Pacifico');
       expect(result['fontSize'], 12);
     });
@@ -40,9 +40,9 @@ void main() {
         'Given the access to Preferences class When no saved font info is found Then the default info should be returned',
         () async {
       SharedPreferences.setMockInitialValues({});
-      SharedPreferences prefs = await SharedPreferences.getInstance();
+      final SharedPreferences prefs = await SharedPreferences.getInstance();
 
-      Map<String, dynamic> result = await Preferences.loadFont(prefs);
+      final Map<String, dynamic> result = await Preferences.loadFont(prefs);
 
       expect(result['font'], 'Roboto');
       expect(result['fontSize'], 18);

@@ -1,8 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'font_manager.dart';
-import 'package:flutter_buddies_destini/story_brain.dart';
-import 'package:flutter_buddies_destini/story.dart';
+import 'package:flutter/material.dart';
+import '../../data/models/models.dart';
+import '../../logic/story_brain.dart';
+
+import '../themes/font_manager.dart';
 
 class StoryPage extends StatefulWidget {
   final int index;
@@ -10,12 +11,13 @@ class StoryPage extends StatefulWidget {
     storyBrain.setStoryBrain(index);
   }
 
+  @override
   _StoryPageState createState() => _StoryPageState(index);
 }
 
 class _StoryPageState extends State<StoryPage> {
   final int index;
-  TextStyle _style = TextStyle();
+  TextStyle _style = const TextStyle();
 
   _StoryPageState(this.index);
 
@@ -31,7 +33,7 @@ class _StoryPageState extends State<StoryPage> {
 
   void refreshStoryPage(int newPageIndex) {
     setState(() {
-      print(newPageIndex);
+      // print(newPageIndex);
       storyBrain.nextPage(newPageIndex);
     });
   }
@@ -45,15 +47,15 @@ class _StoryPageState extends State<StoryPage> {
         style: _style,
       )),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             // TODO change background image.
             image: AssetImage('images/creepy.jpg'),
             fit: BoxFit.cover,
           ),
         ),
-        padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
-        constraints: BoxConstraints.expand(),
+        padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 15.0),
+        constraints: const BoxConstraints.expand(),
         child: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -76,8 +78,8 @@ class _StoryPageState extends State<StoryPage> {
 
 List<Widget> choiceButtonList(
     SPage storyPage, Function refreshStoryPage, TextStyle style) {
-  int numButtons = storyPage.choices.length;
-  List<Widget> toReturn = List<Widget>();
+  final int numButtons = storyPage.choices.length;
+  final List<Widget> toReturn = <Widget>[];
   for (int i = 0; i < numButtons; i++) {
     toReturn.add(
       choiceButton(
@@ -94,10 +96,10 @@ List<Widget> choiceButtonList(
 Widget choiceButton(
     {String text, TextStyle style, int index, Function refreshStoryPage}) {
   return Padding(
-    padding: EdgeInsets.symmetric(horizontal: 10.0),
+    padding: const EdgeInsets.symmetric(horizontal: 10.0),
     child: FlatButton(
       onPressed: () {
-        print(index);
+        // print(index);
         refreshStoryPage(index);
       },
       color: Colors.red,

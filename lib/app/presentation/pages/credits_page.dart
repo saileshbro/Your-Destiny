@@ -1,6 +1,7 @@
-import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter_buddies_destini/stories.dart';
+import 'package:flutter/material.dart';
+
+import '../../data/provider/stories.dart';
 
 /*  A simple credits page was created in order to
 highlight the creators of the story and the developers that worked on the project
@@ -9,10 +10,17 @@ highlight the creators of the story and the developers that worked on the projec
 class CreditsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double headLine = 35.0;
+    const double headLine = 35.0;
 
     final allStoryList = getAllStories();
-    final developers = ["Tragikomedes", "hanskokx", "ion05", "goober0329", "Rift3000"];
+    final developers = [
+      "Tragikomedes",
+      "hanskokx",
+      "ion05",
+      "goober0329",
+      "Rift3000",
+      "ProtoManGG",
+    ];
 
     return Scaffold(
       appBar: AppBar(),
@@ -24,7 +32,7 @@ class CreditsPage extends StatelessWidget {
               child: Center(
                 child: Text(
                   "credits_story".tr(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: headLine,
                     fontWeight: FontWeight.bold,
                   ),
@@ -47,7 +55,7 @@ class CreditsPage extends StatelessWidget {
               child: Center(
                 child: Text(
                   "credits_developers".tr(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontSize: headLine,
                     fontWeight: FontWeight.bold,
                   ),
@@ -58,9 +66,7 @@ class CreditsPage extends StatelessWidget {
               child: ListView.builder(
                 itemCount: developers.length,
                 itemBuilder: (context, index) {
-                  return ListTile(
-                    title: Text(developers[index])
-                  );
+                  return ListTile(title: Text(developers[index]));
                 },
               ),
             ),

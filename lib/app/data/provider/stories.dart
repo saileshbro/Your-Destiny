@@ -1,4 +1,5 @@
-import 'package:flutter_buddies_destini/story.dart';
+import '../models/choice_model.dart';
+import '../models/models.dart';
 
 // The logic for each story is defined below.  However, the translations for each
 // story are defined in assets/translations/<lang>.json
@@ -220,7 +221,7 @@ final stories = [
 
 // This function is only called via story_brain.dart to get a story from the
 // stories list by index. It returns the story from stories[] at the given index.
-getStory(int index) {
+Story getStory(int index) {
   return stories[index];
 }
 

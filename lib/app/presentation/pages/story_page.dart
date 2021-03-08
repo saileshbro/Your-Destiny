@@ -49,6 +49,7 @@ class _StoryPageState extends State<StoryPage> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
+            colorFilter: ColorFilter.mode(Colors.greenAccent, BlendMode.hue),
             // TODO change background image.
             image: AssetImage('images/creepy.jpg'),
             fit: BoxFit.cover,
@@ -62,8 +63,17 @@ class _StoryPageState extends State<StoryPage> {
             children: <Widget>[
               Expanded(
                 flex: 12,
-                child: Center(
-                  child: Text(storyBrain.getPage().text.tr(), style: _style),
+                child: Container(
+                  margin: const EdgeInsets.only(bottom: 40.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 30.0, vertical: 40.0),
+                  alignment: Alignment.topCenter,
+                  color: Colors.black38.withOpacity(0.5),
+                  child: Text(
+                    storyBrain.getPage().text.tr(),
+                    style: _style,
+                    textAlign: TextAlign.justify,
+                  ),
                 ),
               ),
               ...choiceButtonList(
@@ -95,15 +105,22 @@ List<Widget> choiceButtonList(
 
 Widget choiceButton(
     {String text, TextStyle style, int index, Function refreshStoryPage}) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 10.0),
+  return Container(
+    margin: const EdgeInsets.only(top: 20.0),
     child: FlatButton(
+      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10.0),
+      ),
       onPressed: () {
         // print(index);
         refreshStoryPage(index);
       },
       color: Colors.red,
-      child: Text(text, style: style),
+      child: Text(
+        text,
+        style: style,
+      ),
     ),
   );
 }

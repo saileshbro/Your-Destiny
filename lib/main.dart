@@ -7,7 +7,13 @@ import 'app/presentation/themes/font_manager.dart';
 
 void main() => runApp(
       EasyLocalization(
-        supportedLocales:const [Locale('en'), Locale('pl'), Locale('es'), Locale('id')],
+        supportedLocales: const [
+          Locale('en'),
+          Locale('pl'),
+          Locale('es'),
+          Locale('id'),
+          Locale('ne')
+        ],
         path: 'assets/translations',
         fallbackLocale: const Locale('en'),
         child: LoadingPage(),

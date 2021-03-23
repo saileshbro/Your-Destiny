@@ -10,7 +10,12 @@ import 'package:easy_localization/easy_localization.dart';
 
 Widget createLocalizedWidget(Widget child, [Locale locale]) => EasyLocalization(
       path: 'assets/translations',
-      supportedLocales: const [Locale('en'), Locale('pl'), Locale('es')],
+      supportedLocales: const [
+        Locale('en'),
+        Locale('pl'),
+        Locale('es'),
+        Locale("ne")
+      ],
       saveLocale: false,
       startLocale: locale ?? const Locale('en'),
       fallbackLocale: const Locale('en'),
